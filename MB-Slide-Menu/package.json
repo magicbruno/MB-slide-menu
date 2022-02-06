@@ -1,0 +1,16 @@
+{
+  "name": "mb-slide-menu",
+  "version": "0.0.0",
+  "description": "MB-Slide-Menu",
+  "main": "demo/index.html",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.49.7"
+  }
+}
