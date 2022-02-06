@@ -3,27 +3,38 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
+        integrity='sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=='
+        crossorigin='anonymous' />
+
     <meta charset="utf-8" />
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.css'
         integrity='sha512-c9N/Xq0n4rQdyCXF4RgrRYAAOSnNJDp8NWILsSUx+33zWyaMbXXvqajgO0UXybRdTGVpxq3FBrcGwabkWsT8OA=='
         crossorigin='anonymous' />
-    <link rel="stylesheet" href="/MB-Slide-Menu/dist/css/slide-menu.css">
+    <link rel="stylesheet" href="../dist/css/slide-menu.css">
     <title>Demo</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <button class="btn btn-link">
-            <div class="container-fluid">
+    <header class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <button class="btn btn-link" data-show="mb-slide-menu" data-target="#mymenu">
                 <span class="navbar-toggler-icon"></span>
-            </div>
-        </button>
-    </nav>
-    <div id="mymenu" data-mb-slidemenu>
-        <a href="#">Pippo</a>
+            </button>
+        </div>
+    </header>
+    <!-- MENU -->
+    <nav id="mymenu" data-mb-slidemenu class="d-none">
+        <!-- CLOSE BUTTON -->
+        <div class="menu-close"></div>
+        <!-- MENU ITEMS-->
+        <a href="https://www.google.com">Pippo</a>
         <a href="#">Pluto</a>
         <a href="#">Paperino</a>
-    </div>
+        <!-- END MENU ITEMS-->
+    </nav>
+    <!-- END MENU -->
+    <script src="../dist/js/mb-slide-menu.js"></script>
 </body>
 
 </html>

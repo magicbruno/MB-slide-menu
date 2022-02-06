@@ -1,0 +1,91 @@
+[data-mb-slidemenu] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: var(--menu-padding);
+    transform: translateX(-100%);
+    transition: transform .5s;
+    background-color: var(--background-color);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    z-index: 10000;
+
+    &.show {
+        transform: translateX(0);
+    }
+
+    &.d-none{
+        display: none!important;
+    }
+
+    @media (min-width: 400px) {
+        width: 400px;
+    }
+
+    >* {
+        list-style: none;
+        display: block;
+        background-color: var(--item-background-color);
+        color: var(--item-text-color);
+        padding: var(--item-padding);
+        text-decoration: none;
+        font-weight: 300;
+        font-size: var(--item-font-size);
+        position: relative;
+
+        &:hover,
+        &.active {
+            text-decoration: none;
+            color: var(--item-text-color);
+
+            &::after {
+                background-color: var(--item-text-color);
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0.25rem;
+                height: 100%;
+            }
+        }
+    }
+
+    .menu-close {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: transparent;
+        z-index: 10;
+        cursor: pointer;
+
+        &:before,
+        &:after {
+            content: '';
+            width: 80%;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: var(--item-text-color);
+        }
+
+        &:before {
+            -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:after {
+            -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+
+}

@@ -1,41 +1,4 @@
 
 @import "themes/default";
-[data-mb-slidemenu] {
-    position: static;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: var(--menu-padding);
-    transform: translateX(-100%);
-    transition: transform .5s;
-    background-color: var(--background-color);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
+@import "parts/menu";
 
-    &.show {
-        transform: translateX(0);
-    }
-
-    @media (min-width: 400px) {
-        width: 400px;
-    }
-
-    > * {
-        list-style: none;
-        display: block;
-        background-color: var(--item-background-color);
-        color: var(--item-text-color);
-        padding: var(--item-padding);
-        text-decoration: none;
-        font-weight: 300;
-        font-size: var(--item-font-size);
-
-        &:hover {
-            background-color: var(--item-hover-background-color);
-            color: var(--item-hover-text-color);
-        }
-    }
-}
