@@ -1,9 +1,9 @@
 [data-mb-slidemenu] {
   --background-color: rgba(0,0,0,0.4);
   --menu-padding: 1.5rem 0;
-  --menu-hidden-transform: translateX(-100%);
-  --menu-show-transform: translateX(0);
-  --menu-left-position: 0;
+  --menu-hidden-transform: translateX(0);
+  --menu-show-transform: translateX(-100%);
+  --menu-left-position: 100%;
   --item-padding: .50rem 1rem;
   --item-margin: 0.10rem;
   --item-text-color: #fafafa;
@@ -11,8 +11,8 @@
   --item-hover-text-color: #fff;
   --item-hover-background-color: rgba(0,0,0,0.2);
   --item-font-size: 1.5rem;
-  --item-hover-after-left: 0;
-  --item-hover-after-right: auto;
+  --item-hover-after-left: auto;
+  --item-hover-after-right: 0;
 }
 
 [data-mb-slidemenu] {

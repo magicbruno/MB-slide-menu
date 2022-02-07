@@ -1,12 +1,12 @@
 [data-mb-slidemenu] {
     position: fixed;
     top: 0;
-    left: 0;
+    left: var(--menu-left-position);
     height: 100vh;
     width: 100vw;
     margin: 0;
     padding: var(--menu-padding);
-    transform: translateX(-100%);
+    transform: var(--menu-hidden-transform);
     transition: transform .5s;
     background-color: var(--background-color);
     display: flex;
@@ -15,7 +15,7 @@
     z-index: 10000;
 
     &.show {
-        transform: translateX(0);
+        transform: var(--menu-show-transform);
     }
 
     &.d-none{
@@ -32,6 +32,7 @@
         background-color: var(--item-background-color);
         color: var(--item-text-color);
         padding: var(--item-padding);
+        margin: var(--item-margin);
         text-decoration: none;
         font-weight: 300;
         font-size: var(--item-font-size);
@@ -40,7 +41,7 @@
         &:hover,
         &.active {
             text-decoration: none;
-            color: var(--item-text-color);
+            color: var(--item-hover-text-color);
 
             &::after {
                 background-color: var(--item-text-color);
@@ -48,9 +49,16 @@
                 display: block;
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: var(--item-hover-after-left);
+                right: var(--item-hover-after-right);
                 width: 0.25rem;
                 height: 100%;
+            }
+        }
+        &.active {
+            pointer-events: none;
+            * {
+                pointer-events: none;
             }
         }
     }
